@@ -1,20 +1,70 @@
-.header-container {
+h1 {
   height: 2em;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #2ECC40;
+  background-color: HSLA(140, 100%, 42%, 1);
   text-align: center;
   color: white;
   font-size: 1.6em;
+  padding-top: 0.8em;
 }
 
 .newappt {
   position: relative;
   margin-left: .7em;
-  background-color: #2ECC40;
+  background-color: HSLA(140, 100%, 42%, 1);
   color: white;
   font-size: 1.2em;
   border-style: none;
   border: 1;
+}
+
+.newapp-btn {
+  position: relative;
+  margin-left: .7em;
+  background-color: HSLA(140, 100%, 42%, 1);
+  color: white;
+  font-size: 1.2em;
+  border-style: none;
+  border: 1px solid white;
+  /* float: right; */
+  padding-top: 0;
+}
+
+.apptsearch {
+  display: block;
+  margin: 1em auto;
+  width: %;
+  font-size: 1.5em;
+}
+
+li {
+  box-sizing: border-box;
+  padding: 1.5em;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  background-color: HSLA(140, 100%, 42%, 1);
+  width: 80%;
+  margin: 0 auto 2em;
+  border-radius: 10px;
+  color: white;
+}
+
+.time {
+  width: 25%;
+}
+
+.app-descrip {
+  width: 75%;
+  text-align: right;
+}
+
+.newappt-container {
+  display: none;
+}
+
+.app-details {
+  display: none;
 }
