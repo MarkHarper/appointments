@@ -6,7 +6,19 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/appointments.css">
   </head>
+  <header>
+    <div class="header-container">
+        <span class="title">Appointments</span>
+        <button class="newappt">+</button>
+    </div>
+  </header>
   <body>
+    <form class="search-container">
+      <input type="text" class="apptsearch" name="appointment-search" placeholder="Search">
+    </form>
+    <div class="list-container">
+      <ul class="appointment-list"></ul>
+    </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/appointments.js"></script>
   </body>
