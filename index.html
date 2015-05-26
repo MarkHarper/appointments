@@ -13,13 +13,58 @@
     </div>
   </header>
   <body>
-    <form class="search-container">
-      <input type="text" class="apptsearch" name="appointment-search" placeholder="Search">
-    </form>
-    <div class="list-container">
-      <ul class="appointment-list"></ul>
+    <div class="appointments">
+      <h1 class="appointments-header">Appointments</h1>
+      <form class="search-container">
+        <input type="text" class="apptsearch" name="appointment-search" placeholder="Search">
+      </form>
+      <div class="list-container">
+        <ul class="appointment-list"></ul>
+          <li>
+            <div class="time">
+              <p>
+                5PM
+              </p>
+            </div>
+            <div class="app-descrip">
+              <p>
+                Meet with Chris @ TIY Durham
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="time">
+              <p>
+                5PM
+              </p>
+            </div>
+            <div class="app-descrip">
+              Meet with Chris @ TIY Durham
+            </div>
+          </li>
+          <li>
+            <div class="time">
+              <p>
+                5PM
+              </p>
+            </div>
+            <div class="app-descrip">
+              Meet with Chris @ TIY Durham
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="time">
+              <p>
+                5PM
+              </p>
+            </div>
+            <div class="app-descrip">
+              Meet with Chris @ TIY Durham
+            </div>
+          </li>
+      </div>
     </div>
-
     <div class="newappt-container">
       <h1 class="newappt-header">New Appointment</h1>
       <p>Title</p>
@@ -33,6 +78,15 @@
       <p>City, St</p>
       <input type="text" class="appt-title" name="city" placeholder="City, St">
       <button class="savebtn">Save</button>
+    </div>
+    <div class="app-details">
+      <div class="detail-header">
+        <button class="back"></button>
+        <button class="edit-app"></button>
+      </div>
+      <div class="app-content">
+        <img src="http://i.dailymail.co.uk/i/pix/2014/03/06/article-2574650-18C6F21800000578-304_306x462.jpg" alt="" />
+      </div>
     </div>
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/appointments.js"></script>
