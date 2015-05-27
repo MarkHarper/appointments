@@ -67,9 +67,12 @@
       </div>
     </script>
     <script id="newappointment" type="text/html">
+      <header class="nav">
+        <h1 class="appointments-header">New Appointment</h1>
+        <a class="newapp-btn" href="#new">+</a>
+      </header>
       <div class="newappt-container">
         <div class="newappt-wrapper">
-          <h1 class="newappt-header">New Appointment</h1>
           <p class="input-description">Title</p>
           <input type="text" class="appt-title" name="title" placeholder="Title">
           <p class="input-description">Date</p>
@@ -86,11 +89,13 @@
     </script>
     <script id="appointmentdetails" type="text/html">
       <div class="app-details">
-        <div class="detail-header">
-          <a href='#appointments' class="back">Back</a>
+        <header class="nav">
+          <h1 class="appointments-header">Details</h1>
+          <a href='#appointments' class="back">&larr;</a>
           <a href='#new' class="edit-app">Edit</a>
           <span class="clear"></span>
-        </div>
+        </header>
+          <span class="clear"></span>
         <div class="app-content">
           <img src="http://i.dailymail.co.uk/i/pix/2014/03/06/article-2574650-18C6F21800000578-304_306x462.jpg" alt="" />
         </div>

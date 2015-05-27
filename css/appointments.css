@@ -1,6 +1,7 @@
 body {
   background-color: #92DBE1;
   font-family: sans-serif;
+  padding-top: 4.5em;
 }
 
 h1 {
@@ -107,32 +108,23 @@ li {
   padding: .7em;
 }
 
-.appt-details {
-
-}
-
-
-.app-details {
-
-}
-
-.detail-header {
-  position: relative;
-  background-color: #4D4F5B;
-  overflow: visible;
-  padding-bottom: 0.8em;
-}
 
 .back {
-  font-size: 1.5em;
-  margin: .5em 0 0 0.5em;
+  font-size: 1em;
+  float: left;
+  text-decoration: none;
+  transform: translate(0,-65%);
+  padding-left: 1em;
+  color: #F4F4F2;
 }
 
 .edit-app {
   float: right;
-  font-size: 1.5em;
-  margin: .5em .5em 0 0;
-  font-style: none;
+  font-size: 1em;
+  text-decoration: none;
+  transform: translate(0,-65%);
+  padding-right: 1em;
+  color: #F4F4F2;
 }
 
 
@@ -141,5 +133,4 @@ li {
   width: 90%;
   margin: 2em auto;
   text-align: center;
-
 }
