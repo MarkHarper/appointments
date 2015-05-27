@@ -2,16 +2,23 @@ body {
   background-color: #92DBE1;
   font-family: sans-serif;
 }
+
 h1 {
-  height: 2em;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #4D4F5B;
   text-align: center;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2em;
+  width: 100%%;
+  background-color: #4D4F5B;
   color: #F4F4F2;
   font-size: 1.6em;
   padding-top: 0.8em;
+  text-align: center;
 }
 
 .newappt {
@@ -25,15 +32,12 @@ h1 {
 }
 
 .newapp-btn {
-  position: relative;
-  margin-left: .7em;
-  background-color: #4D4F5B;
-  color: #F4F4F2;
-  font-size: 1.2em;
-  border-style: none;
-  border: 2px solid #DCDDCD;
-  padding-top: 0;
-  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25em;
+  float: right;
+  padding: 1em;
+  transform: translate(0,-65%);
 }
 
 .apptsearch {
