@@ -5,5 +5,5 @@ $(function () {
 
 
   // Kick off our initial route
-  Backbone.history.loadUrl();
+  Backbone.history.loadUrl('#appointments');
 });
