@@ -1,11 +1,15 @@
+body {
+  background-color: #92DBE1;
+  font-family: sans-serif;
+}
 h1 {
   height: 2em;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: HSLA(140, 100%, 42%, 1);
+  background-color: #4D4F5B;
   text-align: center;
-  color: white;
+  color: #F4F4F2;
   font-size: 1.6em;
   padding-top: 0.8em;
 }
@@ -13,8 +17,8 @@ h1 {
 .newappt {
   position: relative;
   margin-left: .7em;
-  background-color: HSLA(140, 100%, 42%, 1);
-  color: white;
+  background-color: #4D4F5B;
+  color: #F4F4F2;
   font-size: 1.2em;
   border-style: none;
   border: 1;
@@ -23,12 +27,13 @@ h1 {
 .newapp-btn {
   position: relative;
   margin-left: .7em;
-  background-color: HSLA(140, 100%, 42%, 1);
-  color: white;
+  background-color: #4D4F5B;
+  color: #F4F4F2;
   font-size: 1.2em;
   border-style: none;
-  border: 1px solid white;
+  border: 2px solid #DCDDCD;
   padding-top: 0;
+  border-radius: 5px;
 }
 
 .apptsearch {
@@ -44,11 +49,11 @@ li {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  background-color: HSLA(140, 100%, 42%, 1);
+  background-color: #4D4F5B;
   width: 80%;
   margin: 0 auto 2em;
   border-radius: 10px;
-  color: white;
+  color: #DCDDCD;
 }
 
 .time {
@@ -87,8 +92,8 @@ li {
 
 .input-description {
   text-align: center;
-  background-color: HSLA(140, 100%, 42%, 1);
-  color: white;
+  background-color: #4D4F5B;
+  color: #DCDDCD;
 }
 
 
@@ -109,7 +114,7 @@ li {
 
 .detail-header {
   position: relative;
-  background-color: HSLA(140, 100%, 42%, 1);
+  background-color: #4D4F5B;
   overflow: visible;
   padding-bottom: 0.8em;
 }

@@ -14,3 +14,15 @@ $(".savebtn").click(function() {
   $(".appointments").hide();
   $(".app-details").show();
 });
+
+$(".back").click(function() {
+  $(".newappt-container").hide();
+  $(".appointments").show();
+  $(".app-details").hide();
+});
+
+$(".edit-app").click(function() {
+  $(".newappt-container").show();
+  $(".appointments").hide();
+  $(".app-details").hide();
+});
