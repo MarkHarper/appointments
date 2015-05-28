@@ -1,3 +1,4 @@
 app.router.route('appointments', function () {
-  $('#main').html(app.appointment());
+  app.show('appointment', { apps : app.apps } );
+  //$('#main').html(app.appointment());
 });
