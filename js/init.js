@@ -3,7 +3,10 @@
 $(function () {
   'use strict';
 
+  // Initialize application properties
+  app.apps = new app.ObjectStore();
+
 
   // Kick off our initial route
-  Backbone.history.loadUrl();
+  Backbone.history.loadUrl('#appointments');
 });

@@ -1,11 +1,15 @@
+app.show = function (templateId, model) {
+  var templateHtml = $('#' + templateId).html();
+  var templateFn = _.template(templateHtml, { variable: 'm' });
+  var result = templateFn(model);
 
-$('script[type="text/html"]').each(function () {
-  var script = $(this);
-  app[script.attr('id')] = _.template(script.html(), { variable: 'm' });
-  script.remove();
-});
+  $('#main').html(result);
+};
 
 
-//$('#main').html(app.appointment());
-//$('#main').html(app.newappointment());
-//$('#main').html(app.appointmentdetails());
+
+// $('script[type="text/html"]').each(function () {
+//   var script = $(this);
+//   app[script.attr('id')] = _.template(script.html(), { variable: 'm' });
+//   script.remove();
+// });

@@ -1,6 +1,7 @@
 body {
   background-color: #92DBE1;
   font-family: sans-serif;
+  padding-top: 4.8em;
 }
 
 h1 {
@@ -19,6 +20,7 @@ h1 {
   font-size: 1.6em;
   padding-top: 0.8em;
   text-align: center;
+  box-shadow: 0 -1px 8px 7px HSLA(198, 13%, 20%, 0.9);
 }
 
 .newappt {
@@ -84,7 +86,9 @@ li {
 }
 
 
-.appt-title,
+.appt-title, .appt-date,
+.appt-time, .appt-street,
+.appt-city,
 .input-description
  {
   width: 80%;
@@ -101,46 +105,38 @@ li {
 }
 
 
-.savebtn {
-  width: 70%;
-  margin: 2em auto;
-  padding: .7em;
+.save {
+  margin: 1em auto;
+  padding: .8em 2em;
+  text-decoration: none;
+  color: white;
+  background-color: HSLA(231, 8%, 33%, 1);
+  border-radius: 5px;
 }
 
-.appt-details {
-
-}
-
-
-.app-details {
-
-}
-
-.detail-header {
-  position: relative;
-  background-color: #4D4F5B;
-  overflow: visible;
-  padding-bottom: 0.8em;
-}
 
 .back {
-  font-size: 1.5em;
-  margin: .5em 0 0 0.5em;
+  font-size: 1em;
+  float: left;
+  text-decoration: none;
+  transform: translate(0,-65%);
+  padding-left: 1em;
+  color: #F4F4F2;
 }
 
 .edit-app {
   float: right;
-  font-size: 1.5em;
-  margin: .5em .5em 0 0;
+  font-size: 1em;
+  text-decoration: none;
+  transform: translate(0,-65%);
+  padding-right: 1em;
+  color: #F4F4F2;
 }
 
-.clear {
-  clear: both;
-}
+
 
 .app-content {
   width: 90%;
   margin: 2em auto;
   text-align: center;
-
 }

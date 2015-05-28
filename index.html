@@ -19,78 +19,51 @@
           <input type="text" class="apptsearch" name="appointment-search" placeholder="Search">
         </form>
         <div class="list-container">
-          <ul class="appointment-list"></ul>
+          <ul class="appointment-list">
+            <% m.apps.forEach(function (newapp) { %>
             <li>
               <div class="time">
-                <p>
-                  5PM
-                </p>
+                <%- newapp.time %>
               </div>
               <div class="app-descrip">
-                <p>
-                  Meet with Chris @ TIY Durham
-                </p>
+                <%- newapp.title %>
               </div>
             </li>
-            <li>
-              <div class="time">
-                <p>
-                  5PM
-                </p>
-              </div>
-              <div class="app-descrip">
-                Meet with Chris @ TIY Durham
-              </div>
-            </li>
-            <li>
-              <div class="time">
-                <p>
-                  5PM
-                </p>
-              </div>
-              <div class="app-descrip">
-                Meet with Chris @ TIY Durham
-              </div>
-            </li>
-            <hr>
-            <li>
-              <div class="time">
-                <p>
-                  5PM
-                </p>
-              </div>
-              <div class="app-descrip">
-                Meet with Chris @ TIY Durham
-              </div>
-            </li>
+            <% }) %>
+          </ul>
         </div>
       </div>
     </script>
     <script id="newappointment" type="text/html">
+      <header class="nav">
+        <h1 class="appointments-header">New Appointment</h1>
+        <a class="newapp-btn" href="#new">+</a>
+      </header>
       <div class="newappt-container">
-        <div class="newappt-wrapper">
-          <h1 class="newappt-header">New Appointment</h1>
+        <form class="newappt-wrapper">
           <p class="input-description">Title</p>
           <input type="text" class="appt-title" name="title" placeholder="Title">
           <p class="input-description">Date</p>
-          <input type="text" class="appt-title" name="date" placeholder="Date">
+          <input type="text" class="appt-date" name="date" placeholder="Date">
           <p class="input-description">Time</p>
-          <input type="text" class="appt-title" name="time" placeholder="Time">
+          <input type="text" class="appt-time" name="time" placeholder="Time">
           <p class="input-description">Street</p>
-          <input type="text" class="appt-title" name="street" placeholder="Street">
+          <input type="text" class="appt-street" name="street" placeholder="Street">
           <p class="input-description">City, St</p>
-          <input type="text" class="appt-title" name="city" placeholder="City, St">
-          <a href="#details">Save</a>
-        </div>
+          <input type="text" class="appt-city" name="city" placeholder="City, St">
+          <a class="save" href="#details">Save</a>
+        </form>
       </div>
     </script>
     <script id="appointmentdetails" type="text/html">
       <div class="app-details">
-        <div class="detail-header">
-          <a href='#appointments' class="back">Back</a>
+        <header class="nav">
+          <h1 class="appointments-header">Details</h1>
+          <a href='#appointments' class="back">&larr;</a>
           <a href='#new' class="edit-app">Edit</a>
           <span class="clear"></span>
-        </div>
+        </header>
+          <span class="clear"></span>
         <div class="app-content">
           <img src="http://i.dailymail.co.uk/i/pix/2014/03/06/article-2574650-18C6F21800000578-304_306x462.jpg" alt="" />
         </div>
@@ -103,6 +76,8 @@
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/appointments.js"></script>
+    <script src="js/appointmentgen.js"></script>
+    <script src="js/object-store.js"></script>
     <script src="js/newshow.js"></script>
     <script src="js/apptdetails.js"></script>
     <script src="js/appointmentsshow.js"></script>
