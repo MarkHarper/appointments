@@ -1,4 +1,4 @@
-app.appointmentgen = function (title, date, time, street, citySt) {
+app.Appointmentgen = function (title, date, time, street, citySt) {
   this.title = title;
   this.date = date;
   this.time = time;

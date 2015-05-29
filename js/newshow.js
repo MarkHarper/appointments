@@ -7,7 +7,7 @@ app.router.route('new', function () {
   $('.save').on('click', function (e) {
     e.preventDefault();
 
-    var newapp = new app.appointmentgen(
+    var newapp =new app.Appointmentgen(
       $('.appt-title').val(),
       $('.appt-date').val(),
       $('.appt-time').val(),

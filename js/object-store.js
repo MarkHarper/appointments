@@ -7,7 +7,8 @@ app.ObjectStore.prototype = {
     this.all[obj.title] = obj;
   },
 
-  getById: function (title) {
+  getByTitle: function (title) {
+    console.log(this.all[title]);
     return this.all[title];
   },
 

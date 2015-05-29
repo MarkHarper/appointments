@@ -1,10 +1,16 @@
-app.router.route('appointments', function () {
-  app.show('appointment', { scope : app.apps } );
-  //$('#main').html(app.appointment());
+(function () {
+  app.router.route('', showList);
+  app.router.route('appointments', showList);
 
-  $('.view-details').on('click', function (e) {
-    e.preventDefault();
+  function showList () {
+    app.show('appointment', { scope : app.apps } );
+    //$('#main').html(app.appointment());
 
-    document.location = '#details';
-  });
-});
+    $('.view-details').on('click', function (e) {
+      e.preventDefault();
+
+      document.location = '#details';
+    });
+  }
+
+})();
