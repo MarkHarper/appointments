@@ -20,15 +20,17 @@
         </form>
         <div class="list-container">
           <ul class="appointment-list">
-            <% m.apps.forEach(function (newapp) { %>
-            <li>
-              <div class="time">
-                <%- newapp.time %>
-              </div>
-              <div class="app-descrip">
-                <%- newapp.title %>
-              </div>
-            </li>
+            <% m.scope.forEach(function (newapp) { %>
+              <a class="see-details" href="#details/<%- newapp.title %>">
+                <li>
+                  <div class="time">
+                    <%- newapp.time %>
+                  </div>
+                  <div class="app-descrip">
+                    <%- newapp.title %>
+                  </div>
+                </li>
+              </a>
             <% }) %>
           </ul>
         </div>
@@ -65,6 +67,9 @@
         </header>
           <span class="clear"></span>
         <div class="app-content">
+          <p>
+
+          </p>
           <img src="http://i.dailymail.co.uk/i/pix/2014/03/06/article-2574650-18C6F21800000578-304_306x462.jpg" alt="" />
         </div>
       </div>
@@ -78,8 +83,8 @@
     <script src="js/appointments.js"></script>
     <script src="js/appointmentgen.js"></script>
     <script src="js/object-store.js"></script>
-    <script src="js/newshow.js"></script>
     <script src="js/apptdetails.js"></script>
+    <script src="js/newshow.js"></script>
     <script src="js/appointmentsshow.js"></script>
     <script src="js/init.js"></script>
   </body>
