@@ -1,8 +1,10 @@
 app.show = function (templateId, model) {
   var templateHtml = $('#' + templateId).html();
+  console.log(templateHtml);
   var templateFn = _.template(templateHtml, { variable: 'm' });
+  console.log(templateFn);
   var result = templateFn(model);
-
+  console.log(result);
   $('#main').html(result);
 };
 
