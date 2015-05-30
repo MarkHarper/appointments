@@ -25,6 +25,12 @@ app.ObjectStore.prototype = {
     }
   },
 
+  update: function (id, newValues) {
+    this.remove(id);
+    this.add(newValues);
+    this.save();
+  },
+
   remove: function (id) {
   delete this.all[id];
   this.save();
