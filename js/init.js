@@ -4,8 +4,8 @@ $(function () {
   'use strict';
 
   // Initialize application properties
-  app.apps = new app.ObjectStore();
-  
+  app.apps = new app.ObjectStore('appts', localStorage);
+
   // Start Backbone history a necessary step for bookmarkable URL's
   Backbone.history.start();
 });

@@ -1,7 +1,12 @@
+html {
+  height: 100vh;
+}
+
 body {
   background-color: #92DBE1;
   font-family: sans-serif;
   padding-top: 4.8em;
+  height: 100%;
 }
 
 h1 {
@@ -139,4 +144,44 @@ li {
   width: 90%;
   margin: 2em auto;
   text-align: center;
+}
+
+.appt-info {
+  width: 25%;
+  background-color: HSLA(231, 8%, 33%, 1);
+  padding: 2%;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+#main {
+  height: 100%;
+}
+
+.app-details {
+  position: relative;
+  height: 100%;
+}
+
+.title-header {
+  font-size: 1.2em;
+  padding-bottom: 0.7em;
+}
+
+.date-time {
+  padding-bottom: 0.5em;
+}
+
+.location {
+  padding-bottom: 0.5em;
+}
+
+.delete-field {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
