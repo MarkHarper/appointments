@@ -5,7 +5,9 @@ app.router.route('details/:title', function (title) {
   // $('#main').html(app.appointmentdetails());
   $('.delete-field').on('click', function (e) {
     e.preventDefault();
-    app.apps.remove(title);
-    document.location = '';
+    if (confirm("Are you sure you want to delete this appointment?")) {
+      app.apps.remove(title);
+      document.location = '';
+    }
   });
 });
