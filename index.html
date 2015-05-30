@@ -62,7 +62,7 @@
         <header class="nav">
           <h1 class="appointments-header">Details</h1>
           <a href='#appointments' class="back">&larr;</a>
-          <a href='#new' class="edit-app">Edit</a>
+          <a href='#edit/<%- m.title %>' class="edit-app">Edit</a>
           <span class="clear"></span>
         </header>
         <span class="clear"></span>
@@ -83,6 +83,28 @@
 
       </div>
     </script>
+    <script id="edit-appointment" type="text/html">
+      <header class="nav">
+        <h1 class="appointments-header">Edit Appointment</h1>
+        <a class="newapp-btn" href="#new">+</a>
+      </header>
+      <div class="newappt-container">
+        <form class="newappt-wrapper">
+          <p class="input-description">Title</p>
+          <input type="text" class="appt-title" name="title" value="<%- m.title %>">
+          <p class="input-description">Date</p>
+          <input type="text" class="appt-date" name="date" value="<%- m.date %>">
+          <p class="input-description">Time</p>
+          <input type="text" class="appt-time" name="time" value="<%- m.time %>">
+          <p class="input-description">Street</p>
+          <input type="text" class="appt-street" name="street" value="<%- m.street %>">
+          <p class="input-description">City, St</p>
+          <input type="text" class="appt-city" name="city" value="<%- m.citySt %>">
+          <a class="save" href="#details">Save</a>
+          <a class="delete-field" href="#details">Delete</a>
+        </form>
+      </div>
+    </script>
 
     <script src="js/jquery-2.1.4.js"></script>
     <script type="text/javascript" src="js/underscore.js"></script>
@@ -93,6 +115,7 @@
     <script src="js/appointmentgen.js"></script>
     <script src="js/object-store.js"></script>
     <script src="js/apptdetails.js"></script>
+    <script src="js/appt-edit.js"></script>
     <script src="js/newshow.js"></script>
     <script src="js/appointmentsshow.js"></script>
     <script src="js/init.js"></script>
