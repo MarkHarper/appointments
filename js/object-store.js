@@ -25,6 +25,11 @@ app.ObjectStore.prototype = {
     }
   },
 
+  remove: function (id) {
+  delete this.all[id];
+  this.save();
+  },
+
   load: function () {
     return JSON.parse(this.storage.getItem(this.key) || '{}');
   },
