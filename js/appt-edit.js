@@ -4,6 +4,9 @@ app.router.route('edit/:title', function (title) {
   var appt = app.apps.getByTitle(title);
   console.log(appt);
   app.show('edit-appointment', appt);
+
+  $('.appt-date').pickadate();
+  $('.appt-time').pickatime();
   //bind
 
   $('.save').on('click', function (e) {
