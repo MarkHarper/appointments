@@ -2,6 +2,8 @@ app.router.route('new', function () {
   //render
   app.show('newappointment');
   //$('#main').html(app.newappointment());
+  $('.appt-date').pickadate();
+  $('.appt-time').pickatime();
 
   //bind
   $('.save').on('click', function (e) {
