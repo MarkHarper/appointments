@@ -1,11 +1,14 @@
+/**************************************
+Global Elements
+**************************************/
+
 html {
   height: 100vh;
 }
 
 body {
-  background-color: #92DBE1;
+  background-color: ;
   font-family: sans-serif;
-  padding-top: 4.8em;
   height: 100%;
 }
 
@@ -13,26 +16,49 @@ h1 {
   text-align: center;
 }
 
+li {
+  box-sizing: border-box;
+  padding: 0.7em;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto 2em;
+  border-radius: 10px;
+  color: #f4f4f4;
+  border: 1px solid HSLA(256, 12%, 82%, 1);
+}
+
 .nav {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  height: 2em;
-  width: 100%%;
-  background-color: #4D4F5B;
   color: #F4F4F2;
   font-size: 1.6em;
   padding-top: 0.8em;
   text-align: center;
-  box-shadow: 0 -1px 8px 7px HSLA(198, 13%, 20%, 0.9);
+  box-shadow: 0 -1px 9px 1px HSLA(256, 12%, 22%, 1);
+  background-color: HSLA(225, 51%, 66%, 1);
+  padding-bottom: 0.8em;
+  max-height: 1em;
 }
+
+#main {
+  background-color: HSLA(225, 51%, 66%, 1);
+  height: 100%;
+
+}
+
+/*******************************************
+Appointments List
+*******************************************/
 
 .newappt {
   position: relative;
   margin-left: .7em;
-  background-color: #4D4F5B;
-  color: #F4F4F2;
+  background-color: ;
+/*  color: #F4F4F2; */
   font-size: 1.2em;
   border-style: none;
   border: 1;
@@ -40,7 +66,7 @@ h1 {
 
 .newapp-btn {
   text-decoration: none;
-  color: white;
+  color: HSLA(256, 12%, 82%, 1);
   font-size: 1.25em;
   float: right;
   padding: 1em;
@@ -54,31 +80,43 @@ h1 {
   font-size: 1.5em;
 }
 
-li {
-  box-sizing: border-box;
-  padding: 1.5em;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  background-color: #4D4F5B;
-  width: 80%;
-  margin: 0 auto 2em;
-  border-radius: 10px;
-  color: #DCDDCD;
-}
-
 .time {
-  width: 25%;
+  text-align: right;
+  flex: 1;
 }
 
 .app-descrip {
-  width: 75%;
-  text-align: right;
+  flex: 2;
+  transform: translateY(25%);
 }
 
+.appointment-list {
+  list-style: none;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.see-details {
+  display: block;
+  text-decoration: none;
+}
+
+.list-container {
+  margin-top: 4em;
+}
+
+.date-time-main {
+  flex-direction: column;
+  display: flex;
+}
+
+/**********************************
+Add New Appointment Page
+**********************************/
+
 .newappt-container {
-
-
+  margin-top: 4em;
+  padding-top: 1.5em;
 }
 
 .newappt-wrapper{
@@ -86,8 +124,8 @@ li {
   flex-direction: column;
 }
 
-.newappt-header {
-  margin-bottom: .7em;
+.appointments-header {
+  color: white;
 }
 
 
@@ -97,7 +135,7 @@ li {
 .input-description
  {
   width: 80%;
-  margin: .3em auto;
+  margin: 1em auto;
   padding: 1em;
   border-radius: 5px;
   font-size: .9em;
@@ -105,8 +143,6 @@ li {
 
 .input-description {
   text-align: center;
-  background-color: #4D4F5B;
-  color: #DCDDCD;
 }
 
 
@@ -114,9 +150,18 @@ li {
   margin: 1em auto;
   padding: .8em 2em;
   text-decoration: none;
-  color: white;
-  background-color: HSLA(231, 8%, 33%, 1);
+  color: HSLA(256, 12%, 82%, 1);
   border-radius: 5px;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+}
+
+.save:hover {
+  margin: 1em auto;
+  padding: .8em 2em;
+  text-decoration: none;
+  color: HSLA(225, 51%, 66%, 1);
+  border-radius: 5px;
+  background-color: white;
 }
 
 
@@ -126,7 +171,9 @@ li {
   text-decoration: none;
   transform: translate(0,-65%);
   padding-left: 1em;
-  color: #F4F4F2;
+  color: HSLA(256, 12%, 82%, 1);
+  display: block;
+  transform: translateY(-97%);
 }
 
 .edit-app {
@@ -135,45 +182,46 @@ li {
   text-decoration: none;
   transform: translate(0,-65%);
   padding-right: 1em;
-  color: #F4F4F2;
+  color: HSLA(256, 12%, 82%, 1);
+  display: block;
+  transform: translateY(-97%);
 }
 
-
-
-.app-content {
-  width: 90%;
-  margin: 2em auto;
-  text-align: center;
-}
+/**************************************
+Appointment Details Page
+**************************************/
 
 .appt-info {
-  width: 25%;
-  background-color: HSLA(231, 8%, 33%, 1);
-  padding: 2%;
+  width: 50%;
+  padding: 1em;
   border-radius: 5px;
-  color: white;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: -50%;
   left: 50%;
-}
-
-#main {
-  height: 100%;
+  transform: translate(-50%,50%);
+  color: white;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
 }
 
 .app-details {
   position: relative;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4em;
+  padding-top: 1.5em;
+
 }
 
 .title-header {
   font-size: 1.2em;
-  padding-bottom: 0.7em;
+  padding-bottom: 1.3em;
+  margin-top: .4em;
 }
 
 .date-time {
-  padding-bottom: 0.5em;
+  padding-bottom: 1em;
 }
 
 .location {
@@ -184,4 +232,99 @@ li {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  padding: 1em;
+  margin-top: 2.5em;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+  border-radius: 5px;
+}
+
+.delete-field:hover {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 1em;
+  margin-top: 2.5em;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+  border-radius: 5px;
+  background-color: white;
+  color: HSLA(225, 51%, 66%, 1);
+}
+
+.float-time {
+  float: right;
+}
+
+.cityState {
+  float: right;
+}
+
+span img {
+  float: right;
+}
+
+.clear {
+  clear: both;
+  display: block;
+}
+
+.weather-data span:first-child {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+/******************************************
+Appointment Edit Page
+******************************************/
+
+.save-delete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#save {
+  margin: 0;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: HSLA(256, 12%, 82%, 1);
+  border-radius: 5px;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+}
+
+#save:hover {
+  margin: 0;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: HSLA(225, 51%, 66%, 1);
+  border-radius: 5px;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+  background-color: white;
+}
+
+#delete {
+  padding: 1em 1.7em;
+  margin-left: 2.5em;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+  border-radius: 5px;
+  text-decoration: none;
+  color: HSLA(256, 12%, 82%, 1);
+  position: static;
+  margin-top: 0;
+  left: 0;
+  transform: translate(0);
+}
+
+#delete:hover {
+  padding: 1em 1.7em;
+  margin-left: 2.5em;
+  border: 2px solid HSLA(256, 12%, 82%, 1);
+  border-radius: 5px;
+  text-decoration: none;
+  color: HSLA(225, 51%, 66%, 1);
+  position: static;
+  margin-top: 0;
+  left: 0;
+  transform: translate(0);
+  background-color: white;
 }

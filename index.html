@@ -17,19 +17,21 @@
           <h1 class="appointments-header">Appointments</h1>
           <a class="newapp-btn" href="#new">+</a>
         </header>
-        <form class="search-container">
-          <input type="text" class="apptsearch" name="appointment-search" placeholder="Search">
-        </form>
         <div class="list-container">
           <ul class="appointment-list">
             <% m.scope.forEach(function (newapp) { %>
               <a class="see-details" href="#details/<%- newapp.title %>">
                 <li>
-                  <div class="time">
-                    <%- newapp.time %>
-                  </div>
                   <div class="app-descrip">
                     <%- newapp.title %>
+                  </div>
+                  <div class="date-time-main">
+                    <div class="date">
+                      <%- newapp.date %>
+                    </div>
+                    <div class="time">
+                      <%- newapp.time %>
+                    </div>
                   </div>
                 </li>
               </a>
@@ -45,15 +47,10 @@
       </header>
       <div class="newappt-container">
         <form class="newappt-wrapper">
-          <p class="input-description">Title</p>
           <input type="text" class="appt-title" name="title" placeholder="Title">
-          <p class="input-description">Date</p>
           <input type="text" class="appt-date" name="date" placeholder="Date">
-          <p class="input-description">Time</p>
           <input type="text" class="appt-time" name="time" placeholder="Time">
-          <p class="input-description">Street</p>
           <input type="text" class="appt-street" name="street" placeholder="Street">
-          <p class="input-description">City, St</p>
           <input type="text" class="appt-city" name="city" placeholder="City, St">
           <a class="save" href="#details">Save</a>
         </form>
@@ -72,14 +69,11 @@
           <h1 class="title-header"><%- m.title %></h1>
           <div class="date-time">
             <span><%- m.date %></span>
-            <span><%- m.time %></span>
+            <span class="float-time"><%- m.time %></span>
           </div>
           <div class="location">
             <span><%- m.street %></span>
             <span class="cityState"><%- m.citySt %></span>
-          </div>
-          <div class="delete-field">
-            <a class="delete-appt">Delete</a>
           </div>
         </div>
 
@@ -92,18 +86,15 @@
       </header>
       <div class="newappt-container">
         <form class="newappt-wrapper">
-          <p class="input-description">Title</p>
           <input type="text" class="appt-title" name="title" value="<%- m.title %>">
-          <p class="input-description">Date</p>
           <input type="text" class="appt-date" name="date" value="<%- m.date %>">
-          <p class="input-description">Time</p>
           <input type="text" class="appt-time" name="time" value="<%- m.time %>">
-          <p class="input-description">Street</p>
           <input type="text" class="appt-street" name="street" value="<%- m.street %>">
-          <p class="input-description">City, St</p>
           <input type="text" class="appt-city" name="city" value="<%- m.citySt %>">
-          <a class="save" href="#details">Save</a>
-          <a class="delete-field" href="#details">Delete</a>
+          <div class="save-delete">
+            <a class="save" id="save" href="#details">Save</a>
+            <a class="delete-field" id="delete" href="#details">Delete</a>
+          </div>
         </form>
       </div>
     </script>

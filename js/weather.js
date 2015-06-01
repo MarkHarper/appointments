@@ -8,9 +8,9 @@ function getWeather () {
     +city+'&units=imperial&APPID=d6bdee234a286f140c6230ff50ac4250')
      .done(function (data) {
         console.log(data);
-        $('.location').append('<div><span>'
+        $('.appt-info').append('<div class="weather-data"><span>'
         +data.main.temp+' &degF</span><span><img src =http://openweathermap.org/img/w/'
         +data.weather[0].icon
-        +'.png></span></div>');
+        +'.png></span></div>'+'<span class="clear"></span><div class="delete-field"><a class="delete-appt">Delete</a></div>');
   })
 }
