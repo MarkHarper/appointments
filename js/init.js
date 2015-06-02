@@ -4,9 +4,8 @@ $(function () {
   'use strict';
 
   // Initialize application properties
-  app.apps = new app.ObjectStore();
+  app.apps = new app.ObjectStore('appts', localStorage);
 
-
-  // Kick off our initial route
-  Backbone.history.loadUrl('#appointments');
+  // Start Backbone history a necessary step for bookmarkable URL's
+  Backbone.history.start();
 });

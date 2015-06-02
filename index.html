@@ -5,6 +5,8 @@
     <title>Appointments</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/appointments.css">
+    <link rel="stylesheet" type="text/css" href="js/pickadate.js-3.5.6/lib/themes/classic.css">
+    <link rel="stylesheet" type="text/css" href="js/pickadate.js-3.5.6/lib/themes/classic.date.css">
   </head>
   <body>
     <div id="main">
@@ -15,20 +17,24 @@
           <h1 class="appointments-header">Appointments</h1>
           <a class="newapp-btn" href="#new">+</a>
         </header>
-        <form class="search-container">
-          <input type="text" class="apptsearch" name="appointment-search" placeholder="Search">
-        </form>
         <div class="list-container">
           <ul class="appointment-list">
-            <% m.apps.forEach(function (newapp) { %>
-            <li>
-              <div class="time">
-                <%- newapp.time %>
-              </div>
-              <div class="app-descrip">
-                <%- newapp.title %>
-              </div>
-            </li>
+            <% m.scope.forEach(function (newapp) { %>
+              <a class="see-details" href="#details/<%- newapp.title %>">
+                <li>
+                  <div class="app-descrip">
+                    <%- newapp.title %>
+                  </div>
+                  <div class="date-time-main">
+                    <div class="date">
+                      <%- newapp.date %>
+                    </div>
+                    <div class="time">
+                      <%- newapp.time %>
+                    </div>
+                  </div>
+                </li>
+              </a>
             <% }) %>
           </ul>
         </div>
@@ -41,15 +47,10 @@
       </header>
       <div class="newappt-container">
         <form class="newappt-wrapper">
-          <p class="input-description">Title</p>
           <input type="text" class="appt-title" name="title" placeholder="Title">
-          <p class="input-description">Date</p>
           <input type="text" class="appt-date" name="date" placeholder="Date">
-          <p class="input-description">Time</p>
           <input type="text" class="appt-time" name="time" placeholder="Time">
-          <p class="input-description">Street</p>
           <input type="text" class="appt-street" name="street" placeholder="Street">
-          <p class="input-description">City, St</p>
           <input type="text" class="appt-city" name="city" placeholder="City, St">
           <a class="save" href="#details">Save</a>
         </form>
@@ -60,26 +61,61 @@
         <header class="nav">
           <h1 class="appointments-header">Details</h1>
           <a href='#appointments' class="back">&larr;</a>
-          <a href='#new' class="edit-app">Edit</a>
+          <a href='#edit/<%- m.title %>' class="edit-app">Edit</a>
           <span class="clear"></span>
         </header>
-          <span class="clear"></span>
-        <div class="app-content">
-          <img src="http://i.dailymail.co.uk/i/pix/2014/03/06/article-2574650-18C6F21800000578-304_306x462.jpg" alt="" />
+        <span class="clear"></span>
+        <div class="appt-info">
+          <h1 class="title-header"><%- m.title %></h1>
+          <div class="date-time">
+            <span><%- m.date %></span>
+            <span class="float-time"><%- m.time %></span>
+          </div>
+          <div class="location">
+            <span><%- m.street %></span>
+            <span class="cityState"><%- m.citySt %></span>
+          </div>
         </div>
+
+      </div>
+    </script>
+    <script id="edit-appointment" type="text/html">
+      <header class="nav">
+        <h1 class="appointments-header">Edit Appointment</h1>
+        <a class="newapp-btn" href="#new">+</a>
+      </header>
+      <div class="newappt-container">
+        <form class="newappt-wrapper">
+          <input type="text" class="appt-title" name="title" value="<%- m.title %>">
+          <input type="text" class="appt-date" name="date" value="<%- m.date %>">
+          <input type="text" class="appt-time" name="time" value="<%- m.time %>">
+          <input type="text" class="appt-street" name="street" value="<%- m.street %>">
+          <input type="text" class="appt-city" name="city" value="<%- m.citySt %>">
+          <div class="save-delete">
+            <a class="save" id="save" href="#details">Save</a>
+            <a class="delete-field" id="delete" href="#details">Delete</a>
+          </div>
+        </form>
       </div>
     </script>
 
     <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/pickadate.js-3.5.6/lib/picker.js"></script>
+    <script src="js/pickadate.js-3.5.6/lib/picker.date.js"></script>
+    <script src="js/pickadate.js-3.5.6/lib/picker.time.js"></script>
     <script type="text/javascript" src="js/underscore.js"></script>
     <script type="text/javascript" src="js/backbone.js"></script>
+
+
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/appointments.js"></script>
     <script src="js/appointmentgen.js"></script>
     <script src="js/object-store.js"></script>
-    <script src="js/newshow.js"></script>
     <script src="js/apptdetails.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/appt-edit.js"></script>
+    <script src="js/newshow.js"></script>
     <script src="js/appointmentsshow.js"></script>
     <script src="js/init.js"></script>
   </body>
