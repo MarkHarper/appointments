@@ -6,11 +6,5 @@ app.router.route('details/:title', function (title) {
 
   getWeather();
 
-  $('.delete-field').on('click', function (e) {
-    e.preventDefault();
-    if (confirm("Are you sure you want to delete this appointment?")) {
-      app.apps.remove(title);
-      document.location = '';
-    }
-  });
+ 
 });

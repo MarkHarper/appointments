@@ -51,12 +51,25 @@
             autofocus
             required
             pattern="[a-zA-Z0-9]+[a-zA-Z0-9\-]*"
-            data-parsley-error-message="Ids must be alphanumeric">
-          <input type="text" class="appt-date" name="date" placeholder="Date">
-          <input type="text" class="appt-time" name="time" placeholder="Time">
-          <input type="text" class="appt-street" name="street" placeholder="Street">
-          <input type="text" class="appt-city" name="city" placeholder="City, St">
-          <button class="save" href="#details">Save</button>
+            data-parsley-error-message="Titles must be alphanumeric">
+          <input type="text" class="appt-date" name="date" placeholder="Date"
+          required  
+          >
+          <input type="text" class="appt-time" name="time" placeholder="Time"
+            required
+            >
+          <input type="text" class="appt-street" name="street" placeholder="Street"
+            autofocus
+            required
+            pattern="[a-zA-Z0-9]+[a-zA-Z0-9\-]*"
+            data-parsley-error-message="Street must be alphanumeric">
+            
+          <input type="text" class="appt-city" name="city" placeholder="City, St"
+            autofocus
+            required
+            pattern="(^[\w\s]+,\s\w{2}$)"
+            data-parsley-error-message="City,St must be alphanumeric">
+          <input class="save" type="submit" value="Save">
         </form>
       </div>
     </script>
@@ -90,14 +103,31 @@
       </header>
       <div class="newappt-container">
         <form class="newappt-wrapper">
-          <input type="text" class="appt-title" name="title" value="<%- m.title %>">
-          <input type="text" class="appt-date" name="date" value="<%- m.date %>">
-          <input type="text" class="appt-time" name="time" value="<%- m.time %>">
-          <input type="text" class="appt-street" name="street" value="<%- m.street %>">
-          <input type="text" class="appt-city" name="city" value="<%- m.citySt %>">
+          <input type="text" class="appt-title" name="title" placeholder="Title" 
+            autofocus
+            required
+            pattern="[a-zA-Z0-9]+[a-zA-Z0-9\-]*"
+            data-parsley-error-message="Titles must be alphanumeric">
+          <input type="text" class="appt-date" name="date" placeholder="Date"
+          required  
+          >
+          <input type="text" class="appt-time" name="time" placeholder="Time"
+            required
+            >
+          <input type="text" class="appt-street" name="street" placeholder="Street"
+            autofocus
+            required
+            pattern="[a-zA-Z0-9]+[a-zA-Z0-9\-]*"
+            data-parsley-error-message="Street must be alphanumeric">
+            
+          <input type="text" class="appt-city" name="city" placeholder="City, St"
+            autofocus
+            required
+            pattern="(^[\w\s]+,\s\w{2}$)|"
+            data-parsley-error-message="Street must be alphanumeric">
           <div class="save-delete">
-            <a class="save" id="save" href="#details">Save</a>
-            <a class="delete-field" id="delete" href="#details">Delete</a>
+            <button class="save" id="save" href="#details">Save</button>
+            <button class="delete-field" id="delete" href="#details">Delete</button>
           </div>
         </form>
       </div>
