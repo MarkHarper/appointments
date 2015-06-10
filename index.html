@@ -46,13 +46,17 @@
         <a class="newapp-btn" href="#new">+</a>
       </header>
       <div class="newappt-container">
-        <form class="newappt-wrapper">
-          <input type="text" class="appt-title" name="title" placeholder="Title">
+        <form class="newappt-wrapper" id="newappt-wrapper">
+          <input type="text" class="appt-title" name="title" placeholder="Title" 
+            autofocus
+            required
+            pattern="[a-zA-Z0-9]+[a-zA-Z0-9\-]*"
+            data-parsley-error-message="Ids must be alphanumeric">
           <input type="text" class="appt-date" name="date" placeholder="Date">
           <input type="text" class="appt-time" name="time" placeholder="Time">
           <input type="text" class="appt-street" name="street" placeholder="Street">
           <input type="text" class="appt-city" name="city" placeholder="City, St">
-          <a class="save" href="#details">Save</a>
+          <button class="save" href="#details">Save</button>
         </form>
       </div>
     </script>
@@ -104,9 +108,8 @@
     <script src="js/pickadate.js-3.5.6/lib/picker.date.js"></script>
     <script src="js/pickadate.js-3.5.6/lib/picker.time.js"></script>
     <script type="text/javascript" src="js/underscore.js"></script>
-    <script type="text/javascript" src="js/backbone.js"></script>
-
-
+    <script type="text/javascript" src="js/backbone.js"></script>  
+    <script src="js/parsley.js"></script>
     <script src="js/app.js"></script>
     <script src="js/router.js"></script>
     <script src="js/appointments.js"></script>

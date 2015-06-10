@@ -8,7 +8,7 @@ app.router.route('edit/:title', function (title) {
   $('.appt-date').pickadate();
   $('.appt-time').pickatime();
   //bind
-
+  $('.newappt-wrapper').parsley();
   $('.save').on('click', function (e) {
     e.preventDefault();
 
@@ -24,7 +24,7 @@ app.router.route('edit/:title', function (title) {
     document.location = '';
   });
 
-  $('.delete-field').on('click', function (e) {
+  $('#delete').on('click', function (e) {
     e.preventDefault();
     if (confirm("Are you sure you want to delete this appointment?")) {
       app.apps.remove(title);
