@@ -7,11 +7,17 @@ Technologies Used
 <li>Backbone JS</li>
 <li>Underscore JS</li>
 <li>Parsley JS</li>
+<li>AJAX</li>
+<li>OpenWeather API</li>
+<li>Local Storage</li>
+<li>OpenWeather API</li>
 
 What We Accomplished?
-<li></li>
-<li>Javascript</li>
-<li>Jquery</li>
-<li>Backbone JS</li>
-<li>Underscore JS</li>
-<li>Parsley JS</li>
+<li>Adding and removing appointments</li>
+<li>Persisting appointments</li>
+<li>Pull weather data for locations of appointments</li>
+<li>Allow the user to edit appointments</li>
+<li>Form Validation</li>
+<li>Managed as a Single Page Application</li>
+
+
