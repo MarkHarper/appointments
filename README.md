@@ -2,3 +2,8 @@ This project was a weekend project for The Iron Yard Code School. The details of
 
 Technologies Used
 <li>HTML & CSS</li>
+<li>Javascript</li>
+<li>Jquery</li>
+<li>Backbone JS</li>
+<li>Underscore JS</li>
+<li></li>
